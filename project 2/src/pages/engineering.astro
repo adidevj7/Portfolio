@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout title="Engineering Skills - Adidev Jhunjhunwala">
+  <Navigation />
+  <main>
+    <h1>Engineering Skills and Background</h1>
+    
+    <section>
+      <h2>Finite Element Analysis Project</h2>
+      <ProjectCard
+        title="FINITE ELEMENT ANALYSIS of Bicycle Frame Loadings"
+        description={[
+          "Utilizing Finite Element Analysis (FEA), I evaluated how various forces—rider weight, pedaling, and impact conditions—affect bicycle frame integrity, optimizing stress distribution and material selection for enhanced durability while refining my skills in computational modeling and structural analysis.",
+          "By simulating real-world cycling scenarios, I identified failure conditions and stress variations across different riding positions and frame materials, enhancing my expertise in FEA, material science, and engineering problem-solving.",
+          "This project strengthened my ability to conduct advanced structural simulations, optimize mesh refinement, and analyze failure conditions, equipping me with practical insights into engineering design and performance optimization."
+        ]}
+        images={["https://raw.githubusercontent.com/adidevj7/Portfolio/main/FEA.jpg"]}
+        link="https://drive.google.com/file/d/184needYSq8ilJQJuXAPSkLdSTPNTY1YW/view?usp=sharing"
+      />
+    </section>
+
+    <section>
+      <h2>Swimming Drag Reduction Analysis</h2>
+      <ProjectCard
+        title="Hydrodynamics of Techsuits - Buoyancy, Drag, and Performance"
+        description={[
+          "Researched how advanced swimming suits leverage fluid mechanics—particularly buoyancy and drag reduction—to enhance athlete performance.",
+          "Developed a simplified mathematical model to compare the drag forces on a swimmer with and without a tech suit.",
+          "Through this project, I honed skills in applying fluid mechanics principles, performing quantitative analyses, and simplifying complex real-world phenomena for engineering calculations."
+        ]}
+        images={["https://raw.githubusercontent.com/adidevj7/Portfolio/main/Fluids%201.png"]}
+        link="https://youtu.be/JUuDu17iAOE"
+      />
+    </section>
+
+    <section>
+      <h2>Robotics (In Progress)</h2>
+      <ProjectCard
+        title="Independent Quadrupedal Robot Design and Creation"
+        description={[
+          "Designed and built an organic-looking, legged robot capable of walking using up to eight revolute servomotors, integrating mechanical design, electronics, and programming.",
+          "Developed a CAD model, 3D printed structural components, and implemented motor control using Python on a single-board computer, optimizing gait patterns through simulation and testing.",
+          "Gained hands-on experience in robotics design, kinematics, finite element analysis, embedded systems, and rapid prototyping, reinforcing problem-solving and iterative engineering skills."
+        ]}
+        images={["https://raw.githubusercontent.com/adidevj7/Portfolio/main/Robot"]}
+      />
+    </section>
+
+    <section>
+      <h2>CAD Proficiency and Toy Design</h2>
+      <ProjectCard
+        title="Reverse Engineering a Toy Cement Mixer Truck"
+        description={[
+          "Used SOLIDWORKS to reverse engineer a toy fire truck, refining CAD modeling skills while applying design engineering principles to accurately recreate complex geometries.",
+          "Gained hands-on experience in analyzing and deconstructing mechanical assemblies, improving my ability to translate real-world components into precise digital models."
+        ]}
+        images={[
+          "https://raw.githubusercontent.com/adidevj7/Portfolio/main/cement.jpg",
+          "https://raw.githubusercontent.com/adidevj7/Portfolio/main/cement%202.jpg"
+        ]}
+      />
+      <ProjectCard
+        title="Novel Toy Design"
+        description={[
+          "Designed and prototyped an interactive, hands-on educational toy using SOLIDWORKS, incorporating tactile elements like spinners and counters to help young children develop arithmetic skills.",
+          "Developed skills in parametric CAD modeling, iterative design optimization, and product development, balancing safety, durability, and user engagement in the final toy design."
+        ]}
+        images={["https://raw.githubusercontent.com/adidevj7/Portfolio/main/Counting%20Toy.png"]}
+        link="https://drive.google.com/file/d/1Unrk82fWyPJXYgfYbZQsbMOxdq5bH1zk/view?usp=sharing"
+      />
+    </section>
+
+    <section>
+      <h2>Strong Hands-on Manufacturing Background</h2>
+      <ProjectCard
+        title="Precision Engineered Hammer"
+        description={[
+          "Gained experience in precision machining and metalworking, including lathe operations, milling, tapping, heat treatment, and press-fitting, ensuring dimensional accuracy and material durability."
+        ]}
+        images={["https://raw.githubusercontent.com/adidevj7/Portfolio/main/Hammer.png"]}
+        link="https://drive.google.com/file/d/16YgB8Vpmbmoy3JYpaSJWqCNS_htuvE4Q/view?usp=sharing"
+      />
+      <ProjectCard
+        title="Scissor Jack"
+        description={[
+          "Developed skills in mechanical assembly and manufacturing workflow, integrating CNC milling, laser cutting, and lathe turning to fabricate and assemble a functional lifting mechanism."
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2>Circuit Design Proficiency</h2>
+      <ProjectCard
+        title="Radio Receiver Creation"
+        description={[
+          "Built a functional AM radio receiver by designing and assembling a demodulation circuit that extracts audio signals from RF waveforms using a germanium diode.",
+          "Gained hands-on experience in circuit design, signal processing, and analog electronics, enhancing my understanding of RF demodulation and amplifier gain optimization."
+        ]}
+      />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text);
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+</style>

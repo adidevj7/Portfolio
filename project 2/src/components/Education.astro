@@ -1,0 +1,107 @@
+---
+interface School {
+  name: string;
+  logo: string;
+  date: string;
+  details: string[];
+}
+
+const schools: School[] = [
+  {
+    name: "Columbia University – New York",
+    logo: "https://raw.githubusercontent.com/adidevj7/Portfolio/main/CU.png",
+    date: "May 2026",
+    details: [
+      "Bachelor of Sciences – Mechanical Engineering",
+      "GPA: 4.00 / 4.00, Dean's List",
+      "Foundational Coursework: Computer Graphics & Design, Mechanics of Materials, Fluid Mechanics, Thermodynamics, Principles of Electrical Engineering, Materials/Processes in Manufacturing",
+      "Advanced Elective Coursework: Alternative Energy Resources, Robotics Studio, Robot Learning"
+    ]
+  },
+  {
+    name: "Claremont McKenna",
+    logo: "https://raw.githubusercontent.com/adidevj7/Portfolio/main/CMC.jpg",
+    date: "",
+    details: [
+      "GPA: 3.80 / 4.00; Major GPA: 3.95 / 4.00",
+      "Relevant Coursework: Computational Engineering, Engineering Design, Modern Physics w/ Computational Applications"
+    ]
+  },
+  {
+    name: "Mallya Aditi International School - Bangalore, India",
+    logo: "https://raw.githubusercontent.com/adidevj7/Portfolio/main/mallya_aditi_logo.jpeg",
+    date: "June 2021",
+    details: [
+      "5th highest in Indian Central Exams (97.6%)",
+      "Captain of the Indian Team - International Youth Physics Tournament"
+    ]
+  }
+];
+---
+
+<div class="education-section">
+  {schools.map(school => (
+    <div class="school-card">
+      <img src={school.logo} alt={school.name} class="school-logo" />
+      <div class="school-info">
+        <h3>{school.name}</h3>
+        {school.date && <p class="date">{school.date}</p>}
+        <ul>
+          {school.details.map(detail => (
+            <li>{detail}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .education-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .school-card {
+    display: flex;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .school-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .school-info {
+    flex: 1;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .date {
+    color: #64748b;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #64748b;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+</style>

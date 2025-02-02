@@ -1,0 +1,38 @@
+---
+const tabs = [
+  { name: 'About Me', href: '/about' },
+  { name: 'Engineering Skills', href: '/engineering' },
+  { name: 'Computational Modeling', href: '/computational' }
+];
+---
+
+<nav class="nav-container">
+  {tabs.map(tab => (
+    <a href={tab.href} class="nav-link">{tab.name}</a>
+  ))}
+</nav>
+
+<style>
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .nav-link:hover {
+    background: var(--primary-light);
+    color: white;
+  }
+</style>
