@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engineering — Adidev Jhunjhunwala</title>
+<meta name="description" content="Mechanical engineering projects: robotics builds, machine design, FEA, hydrodynamics and machining work.">
+<meta property="og:title" content="Engineering — Adidev Jhunjhunwala">
+<meta property="og:description" content="Mechanical engineering projects: robotics builds, machine design, FEA, hydrodynamics and machining work.">
+<meta property="og:image" content="https://ajhun.com/assets/img/adi-headshot.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background: #F8F7F2;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(26,25,23,0.016) 0 1px, transparent 1px 4px),
+      repeating-linear-gradient(90deg, rgba(26,25,23,0.010) 0 1px, transparent 1px 7px);
+    color: #191A1B;
+  }
+  a { color: #1B4A73; }
+  a:hover { color: #191A1B; }
+  ::selection { background: #B9D9EB; }
+  img { max-width: 100%; height: auto; display: block; }
+</style>
+</head>
+<body>
+
+<div style="min-height: 100vh; display: grid; grid-template-columns: 220px minmax(0, 980px); gap: 56px; justify-content: center; padding: 56px 60px 60px;">
+
+  <div style="position: sticky; top: 56px; align-self: start;">
+    <img src="assets/img/adi-headshot.png" alt="Adidev Jhunjhunwala" style="width: 132px; height: 132px; object-fit: cover; display: block; margin-bottom: 26px; filter: saturate(0.85);">
+
+    <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 30px; font-family: 'Archivo', sans-serif; font-size: 14px;">
+      <a href="index.html" style="text-decoration: none; color: #191A1B; font-weight: 600;">Home</a>
+    </div>
+
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">RESEARCH</div>
+    <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 16px; font-family: 'Archivo', sans-serif; font-size: 14px;">
+ <a href="self-awareness.html" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-18"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">01</span><span>Robot Self Awareness</span></a>
+      <a href="n-dimensional-evolved-robots.html" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-19"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">02</span><span>N-Dimensional Evolved Soft Robots</span></a>
+      <div style="display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;"><span>03</span><span style="color: #8E1C30;">coming soon</span></div>
+      <div style="display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 5px; font-weight: 700; line-height: 1.5; color: #4A4A44; margin-top: 4px;"><span style="text-align: center;">·<br>·<br>·</span><span style="text-align: center;">·<br>·<br>·</span></div>
+    </div>
+
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">PAST PROJECTS</div>
+    <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 32px; font-family: 'Archivo', sans-serif; font-size: 14px;">
+      <a href="engineering.html" style="text-decoration: none; color: #191A1B;"><span style="box-shadow: inset 0 -8px 0 #B9D9EB;">Engineering</span></a>
+      <a href="modeling.html" style="text-decoration: none; color: #4A4A44;"class="hv-20">Modeling</a>
+    </div>
+
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">ON THIS PAGE</div>
+    <div style="display: flex; flex-direction: column; gap: 9px; margin-bottom: 32px; font-family: 'Archivo', sans-serif; font-size: 13px;">
+      <a href="#e01" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-21"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">01</span><span>GorrillaBot</span></a>
+      <a href="#e02" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-22"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">02</span><span>Arcade Button Mechanism</span></a>
+      <a href="#e03" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-23"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">03</span><span>Bartending Arm</span></a>
+      <a href="#e04" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-24"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">04</span><span>Bicycle Frame FEA</span></a>
+      <a href="#e05" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-25"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">05</span><span>Techsuit Hydrodynamics</span></a>
+      <a href="#shop" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-26"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">—</span><span>Selected Machining Work</span></a>
+    </div>
+
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">ELSEWHERE</div>
+    <div style="display: flex; flex-direction: column; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+      <a href="https://scholar.google.com/citations?user=qRAMPkYAAAAJ&amp;hl=en" style="text-decoration: none; color: #1B4A73;">Scholar ↗</a>
+      <a href="https://github.com/adidevj7" style="text-decoration: none; color: #1B4A73;">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/adidevj" style="text-decoration: none; color: #1B4A73;">LinkedIn ↗</a>
+      <span style="color: #86867E;">aj3337(at)columbia(dot)edu</span>
+    </div>
+  </div>
+
+  <div>
+
+ <div style="margin-bottom: 12px;">
+ <h1 style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(40px, 4.4vw, 62px); line-height: 1.0; letter-spacing: -0.025em; margin: 0;">Engineering</h1>
+ </div>
+ <div style="margin-bottom: 38px;"></div>
+
+    <!-- 01 · GorrillaBot — text, then all six frames as a grid -->
+    <div id="e01" style="border-top: 1.5px solid #191A1B; padding-top: 22px; margin-bottom: 38px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 44px; align-items: baseline; margin-bottom: 22px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; flex: 0 0 auto;">E.01</div>
+        <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 38px; line-height: 1.04; letter-spacing: -0.02em; margin: 0; flex: 1 1 min(100%, 16ch);">GorrillaBot</h2>
+        <a href="https://youtu.be/xRFmwD7PuS4" style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Video ↗</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 28px;">
+        <p style="flex: 1 1 min(100%, 24ch); font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; max-width: 48ch; text-wrap: pretty;">Our initial goal was to build a custom bipedal robot capable of independently walking on two legs and transforming into a quadrupedal stance using a servo-actuated hinge. As we got closer to the final deadline and realised our final grading was exclusively based on the speed of the robot, we pivoted!</p>
+        <p style="flex: 1 1 min(100%, 24ch); font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; max-width: 48ch; text-wrap: pretty;">We instead connected two of our existing bases together using scrap aluminium and zipties and built a quadrupedal robot that was fast enough to get us the highest grade — all in the last 2 days! The takeaways ranged from the absurd number of iterations that more intentional thought would have saved, to robot CAD, algebraic topology for the pieces, Sim2Real simulation and gait patterns.</p>
+      </div>
+      <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <img src="assets/img/robot2.jpg" alt="GorrillaBot in bipedal stance" style="flex: 1.36 1 0; min-width: 0;">
+        <img src="assets/img/robot3.jpg" alt="GorrillaBot build" style="flex: 1.78 1 0; min-width: 0;">
+        <img src="assets/img/robot.jpg" alt="GorrillaBot build" style="flex: 1.56 1 0; min-width: 0;">
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <img src="assets/img/robot5.jpg" alt="GorrillaBot as a quadruped" style="flex: 1.15 1 0; min-width: 0;">
+        <img src="assets/img/robot6.jpg" alt="GorrillaBot build" style="flex: 1.24 1 0; min-width: 0;">
+        <img src="assets/img/robot4.jpg" alt="GorrillaBot build" style="flex: 1 1 0; min-width: 0;">
+      </div>
+    </div>
+
+    <!-- 02 · Arcade button -->
+ <div id="e02" style="border-top: 1.5px solid #191A1B; padding-top: 22px; margin-bottom: 52px;">
+ <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: stretch;">
+ <img src="assets/img/machinedesign.jpg" alt="High-speed arcade button pressing mechanism" style="flex: 0 1 300px; width: 453px; align-self: stretch; object-fit: contain; object-position: left top; mix-blend-mode: multiply; height: 446px">
+ <div style="flex: 1 1 min(100%, 24ch); max-width: 46ch;">
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; margin-bottom: 12px;">E.02</div>
+ <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.06; letter-spacing: -0.018em; margin: 0 0 18px;">High-Speed Arcade Button Pressing Mechanism</h2>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; text-wrap: pretty;">Designed a single-motor linkage to rapidly reposition and press multiple arcade buttons, optimized for low inertia and repeatability.</p>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; text-wrap: pretty;">Owned mechanism and control optimization — encoder feedback, homing and limits, hard stops — to maximize speed and reliability.</p>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 18px; text-wrap: pretty;">Iterated through prototypes and timed trials, learning what actually matters when tuning real machinery.</p>
+ <a href="https://youtube.com/shorts/Jx5lYF1X8DE" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Video ↗</a>
+ </div>
+ </div>
+ </div>
+
+ <!-- 03 · Bartending arm -->
+ <div id="e03" style="border-top: 1.5px solid #191A1B; padding-top: 22px; margin-bottom: 52px;">
+ <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: baseline; margin-bottom: 18px;">
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; flex: 0 0 auto;">E.03</div>
+ <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.06; letter-spacing: -0.018em; margin: 0; flex: 1 1 min(100%, 20ch);">Robotic Bartending Arm — Kinematics + Workspace</h2>
+ <a href="https://drive.google.com/file/d/1l06afbtEdSCDCh8FI0irQYzVLqEIXaJP/view?usp=sharing" style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Report ↗</a>
+ </div>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 14px; max-width: 66ch; text-wrap: pretty;">Modeled a multi-DOF arm with DH parameters and derived forward and inverse kinematics.</p>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; max-width: 66ch; text-wrap: pretty;">Analyzed workspace and singularities and validated trajectories in simulation.</p>
+ </div>
+
+ <!-- 04 · FEA -->
+ <div id="e04" style="border-top: 1.5px solid #191A1B; padding-top: 22px; margin-bottom: 52px;">
+ <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: baseline; margin-bottom: 20px;">
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; flex: 0 0 auto;">E.04</div>
+ <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.06; letter-spacing: -0.018em; margin: 0; flex: 1 1 min(100%, 20ch);">FEA of Bicycle Frame Loadings</h2>
+ <a href="https://drive.google.com/file/d/184needYSq8ilJQJuXAPSkLdSTPNTY1YW/view?usp=sharing" style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Report ↗</a>
+ </div>
+ <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 22px;">
+ <div role="img" aria-label="Von Mises stress plot across the bicycle frame" style="flex: 1 1 min(100%, 300px); aspect-ratio: 1514 / 1000; background-image: url(&quot;assets/img/fea.jpg&quot;); background-size: 132% auto; background-position: 0% 46%; background-repeat: no-repeat; mix-blend-mode: multiply; filter: brightness(1.14) contrast(1.1) saturate(1.06);"></div>
+ <div role="img" aria-label="Von Mises stress colour scale, N per square metre" style="flex: 0 0 190px; aspect-ratio: 0.45; margin-left: -34px; background-image: url(&quot;assets/img/fea.jpg&quot;); background-size: 588% auto; background-position: 94% 50%; background-repeat: no-repeat; mix-blend-mode: multiply; filter: brightness(1.14) contrast(1.1) saturate(1.06);"></div>
+ </div>
+ <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+ <p style="flex: 1 1 min(100%, 24ch); font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; text-wrap: pretty;">Used Finite Element Analysis to evaluate how various forces — rider weight, pedaling, and impact conditions — affect bicycle frame integrity, to understand stress distribution and material selection.</p>
+ <p style="flex: 1 1 min(100%, 24ch); font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; text-wrap: pretty;">Identified failure conditions by simulating real-world cycling scenarios and stress variations across different riding positions and frame materials.</p>
+ </div>
+ </div>
+
+ <!-- 05 · Techsuits -->
+ <div id="e05" style="border-top: 1.5px solid #191A1B; padding-top: 22px; margin-bottom: 52px;">
+ <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: baseline; margin-bottom: 20px;">
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; flex: 0 0 auto;">E.05</div>
+ <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.06; letter-spacing: -0.018em; margin: 0; flex: 1 1 min(100%, 24ch);">Hydrodynamics of Techsuits — Buoyancy, Drag, and Performance</h2>
+ <a href="https://youtu.be/JUuDu17iAOE" style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Video ↗</a>
+ </div>
+
+ <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+ <div style="flex: 1 1 calc(40% - 20px); min-width: 0; max-width: 44ch;">
+ <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; text-wrap: pretty;">Researched how advanced swimming suits leverage fluid mechanics — particularly buoyancy and drag reduction — to enhance athlete performance.</p>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; text-wrap: pretty;">Built a simplified model of a swimmer at Re = 3.3 × 10⁶ and solved it twice: bare skin over the full frontal area, then half that area covered by fabric at a lower drag coefficient.</p>
+ </div>
+ <div style="flex: 1 1 calc(60% - 20px); min-width: 0;">
+ <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 1px solid #191A1B; padding-bottom: 8px; margin-bottom: 16px;">
+ <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E;">RESULTING DRAG FORCE</span>
+ <span style="font-family: 'Newsreader', serif; font-size: 26px; line-height: 1; letter-spacing: -0.02em; color: #8E1C30;">−16.0%</span>
+ </div>
+ <div style="margin-bottom: 14px;">
+ <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+ <span style="font-family: 'Newsreader', serif; font-size: 20px; color: #191A1B;">No suit</span>
+ <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8E1C30;">235.97 N</span>
+ </div>
+ <div style="height: 24px; background: #8E1C30; width: 100%;"></div>
+ </div>
+ <div style="margin-bottom: 14px;">
+ <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+ <span style="font-family: 'Newsreader', serif; font-size: 20px; color: #191A1B;">Super suit</span>
+ <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #1B4A73;">198.10 N</span>
+ </div>
+ <div style="height: 24px; background: #1B4A73; width: 84%;"></div>
+ </div>
+ <div style="display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 14px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #86867E; border-bottom: 1px solid #191A1B; padding-bottom: 8px; margin-top: 22px;">
+ <span>PARAMETER</span><span>NO SUIT</span><span>SUPER SUIT</span>
+ </div>
+ <div style="display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 14px; padding: 7px 0; border-top: 1px solid #E4E1D6; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+ <span style="color: #33332E;">skin, frontal area</span><span style="color: #8E1C30;">100%</span><span style="color: #1B4A73;">50%</span>
+ </div>
+ <div style="display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 14px; padding: 7px 0; border-top: 1px solid #E4E1D6; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+ <span style="color: #33332E;">fabric, frontal area</span><span style="color: #8E1C30;">0%</span><span style="color: #1B4A73;">50%</span>
+ </div>
+ <div style="display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 14px; padding: 7px 0; border-top: 1px solid #E4E1D6; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+ <span style="color: #33332E;">body angle θ</span><span style="color: #8E1C30;">6.0°</span><span style="color: #1B4A73;">5.0°</span>
+ </div>
+ <div style="display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 14px; padding: 7px 0; border-top: 1px solid #E4E1D6; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+ <span style="color: #33332E;">effective C_D</span><span style="color: #8E1C30;">0.92</span><span style="color: #1B4A73;">0.83</span>
+ </div>
+ <div style="display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 14px; padding: 7px 0; border-top: 1px solid #E4E1D6; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+ <span style="color: #33332E;">frontal area A_f</span><span style="color: #8E1C30;">0.1286 m²</span><span style="color: #1B4A73;">0.1139 m²</span>
+ </div>
+ <div style="display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 14px; padding: 7px 0; border-top: 1px solid #E4E1D6; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+ <span style="color: #33332E;">velocity V</span><span style="color: #8E1C30;">2.00 m/s</span><span style="color: #1B4A73;">2.05 m/s</span>
+ </div>
+ <div style="border-top: 1px solid #191A1B; padding-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; line-height: 1.8; color: #86867E;">SHARED: Re 3.3 × 10⁶ · SKIN C_D 0.92 · FABRIC C_D 0.62 · A_f0 0.4 m² · A_s0 1.7 m²</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Selected machining work — each entry laid out to its own images -->
+ <div id="shop" style="border-top: 1.5px solid #191A1B; padding-top: 22px; margin-bottom: 40px;">
+ <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.06; letter-spacing: -0.018em; margin: 0 0 10px;">Selected Machining Work</h2>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 40px; max-width: 62ch; text-wrap: pretty;">Mills, lathes, G-code and CNC, laser cutters, 3D printers, sawing, heat treating — mostly coursework, all of it hand-made.</p>
+
+ <!-- Duesenberg — parts left, assembled car right, matched heights -->
+ <div style="border-top: 1px solid #191A1B; padding-top: 20px; margin-bottom: 38px;">
+ <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: baseline; margin-bottom: 18px;">
+ <h3 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 26px; line-height: 1.12; margin: 0; flex: 1 1 min(100%, 20ch);">Duesenberg 1921 Grand Prix — 1:64 model car</h3>
+ <a href="https://drive.google.com/file/d/15SD7NYWNXtD9Unygi80OGEtxdVWJDbZv/view?usp=sharing" style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Report ↗</a>
+ </div>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 16px; line-height: 1.7; color: #33332E; margin: 0 0 20px; max-width: 62ch; text-wrap: pretty;">A scalable production plan, then a prototype built to it — 3D printing, casting and injection molding from scratch, with tooling adjusted for tolerance and shrink.</p>
+ <div style="display: flex; gap: 16px; align-items: flex-start;">
+ 
+ <div role="img" aria-label="The assembled 1:64 Duesenberg" style="flex: 2.46 1 0; min-width: 0; aspect-ratio: 2.46; background-image: url(&quot;assets/img/car.jpg&quot;); background-size: 104% auto; background-position: 50% 38%; mix-blend-mode: multiply; filter: brightness(1.34) contrast(1.08) saturate(1.14); width: 743px; height: 363px"></div><div role="img" aria-label="Moulds, tooling and cast components" style="flex: 0.73 1 0; min-width: 0; aspect-ratio: 0.73; background-image: url(&quot;assets/img/molds.jpg&quot;); background-size: cover; background-position: 50% 46%; mix-blend-mode: multiply; width: 223px; height: 360px"></div>
+ </div>
+ </div>
+
+ <!-- Hammer / scissor-jack — two separate entries, side by side -->
+ <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 38px;">
+ <div style="flex: 1 1 calc(50% - 20px); min-width: 0; border-top: 1px solid #191A1B; padding-top: 20px;">
+ <h3 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 26px; line-height: 1.12; margin: 0 0 8px;">Precision hammer</h3>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 16px; line-height: 1.7; color: #33332E; margin: 0 0 10px; text-wrap: pretty;">Turned and milled from stock, then heat treated — the first part I made to a drawing tolerance rather than by eye.</p>
+ <a href="https://drive.google.com/file/d/16YgB8Vpmbmoy3JYpaSJWqCNS_htuvE4Q/view?usp=sharing" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Report ↗</a>
+ <img src="assets/img/hammer.png" alt="Precision engineered hammer" style="width: 100%; margin-top: 16px;">
+ </div>
+ <div style="flex: 1 1 calc(50% - 20px); min-width: 0; border-top: 1px solid #191A1B; padding-top: 20px;">
+ <h3 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 26px; line-height: 1.12; margin: 0 0 8px;">Scissor-jack</h3>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 16px; line-height: 1.7; color: #33332E; margin: 0 0 10px; text-wrap: pretty;">A geared lifting mechanism cut on the mill and lathe with G-code and CNC, assembled to work under load.</p>
+ <a href="https://drive.google.com/file/d/16YgB8Vpmbmoy3JYpaSJWqCNS_htuvE4Q/view?usp=sharing" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Report ↗</a>
+ <img src="assets/img/sj.jpg" alt="Scissor jack" style="width: 483px; margin-top: 16px; height: 336px">
+ </div>
+ </div>
+
+ <!-- Cement mixer + novel toy, two columns -->
+ <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 38px;">
+ <div style="flex: 1 1 calc(50% - 20px); min-width: 0; border-top: 1px solid #191A1B; padding-top: 20px;">
+ <h3 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 26px; line-height: 1.12; margin: 0 0 8px;">Reverse engineering a toy cement mixer truck</h3>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 16px; line-height: 1.7; color: #33332E; margin: 0 0 16px; text-wrap: pretty;">Full teardown, then the drivetrain and mixer geometry rebuilt in CAD from measurement.</p>
+ <div style="display: flex; gap: 12px; align-items: flex-start;">
+ <div role="img" aria-label="Exploded view of the truck's components" style="flex: 0.70 1 0; min-width: 0; aspect-ratio: 0.70; background-image: url(&quot;assets/img/cement-2.jpg&quot;); background-size: 268% auto; background-position: 10.5% 34%; background-repeat: no-repeat; mix-blend-mode: multiply;"></div>
+ <div role="img" aria-label="The assembled truck, rebuilt in CAD" style="flex: 1.1 1 0; min-width: 0; aspect-ratio: 1.1; background-image: url(&quot;assets/img/cement.jpg&quot;); background-size: 222% auto; background-position: 55% 62%; mix-blend-mode: multiply; filter: brightness(1.42) contrast(1.02) saturate(1.26);"></div>
+ </div>
+ <div style="display: flex; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: #86867E; margin-top: 8px;">
+ <span style="flex: 0.70 1 0;">EXPLODED</span>
+ <span style="flex: 1.1 1 0;">ASSEMBLED</span>
+ </div>
+ </div>
+ <div style="flex: 1 1 calc(50% - 20px); min-width: 0; border-top: 1px solid #191A1B; padding-top: 20px;">
+ <h3 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 26px; line-height: 1.12; margin: 0 0 8px;">Novel toy design</h3>
+ <p style="font-family: 'Archivo', sans-serif; font-size: 16px; line-height: 1.7; color: #33332E; margin: 0 0 16px; text-wrap: pretty;">A counting mechanism for young children, designed around a single moving part.</p>
+ <a href="https://drive.google.com/file/d/1Unrk82fWyPJXYgfYbZQsbMOxdq5bH1zk/view?usp=sharing" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none; color: #1B4A73;">Report ↗</a>
+ <img src="assets/img/counting-toy.png" alt="Novel toy design" style="width: 100%; margin-top: 16px; mix-blend-mode: multiply; filter: brightness(1.30) contrast(1.04) saturate(1.22);">
+ </div>
+ </div>
+ </div>
+
+ <div style="display: flex; gap: 26px; flex-wrap: wrap; border-top: 1px solid #191A1B; padding-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+      <a href="index.html" style="text-decoration: none; color: #1B4A73;">← HOME</a>
+      <a href="modeling.html" style="text-decoration: none; color: #1B4A73;">MODELING →</a>
+    </div>
+  </div>
+</div>
+
+</body></html>
