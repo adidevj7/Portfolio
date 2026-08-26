@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html><head>
+<!DOC</div>TYPE html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>N-Dimensional Evolved Soft Robots — Adidev Jhunjhunwala</title>
@@ -8,8 +9,9 @@
 <meta property="og:description" content="Evolving soft-bodied robots in more than three spatial dimensions.">
 <meta property="og:image" content="https://ajhun.com/assets/img/adi-headshot.png">
 <meta property="og:type" content="website">
-<meta name="robots" content="noindex">
-<link rel="icon" href="assets/img/favicon.png">
+<link rel="icon" href="assets/img/adi-headshot.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
 <style>
  html { -webkit-font-smoothing: antialiased; }
@@ -24,14 +26,64 @@
   }
   a { color: #1B4A73; }
   a:hover { color: #191A1B; }
+
+  /* --- mobile --- */
+  .m-nav { display: none; }
+  @media (max-width: 768px) {
+    .pg { display: block !important; padding: 26px 20px 40px !important; }
+    .rail { display: none !important; }
+    .m-nav { display: block; padding: 0 20px; }
+    .h1 { font-size: 38px !important; line-height: 0.99 !important; max-width: none !important; }
+    .sec-h { font-size: 26px !important; line-height: 1.14 !important; }
+    .pg p { font-size: 16px !important; line-height: 1.68 !important; }
+    .pg div:has(> img), .pg div:has(> [role="img"]) { flex-wrap: wrap !important; gap: 16px !important; }
+    .pg img, .pg [role="img"] { flex: 1 1 100% !important; width: 100% !important; max-width: 100% !important; }
+  }
   ::selection { background: #B9D9EB; }
 </style>
 </head>
 <body>
 
-<div style="min-height: 100vh; display: grid; grid-template-columns: 220px minmax(0, 980px); gap: 56px; justify-content: center; padding: 56px 60px 60px;">
+ <div class="m-nav">
 
- <div style="position: sticky; top: 56px; align-self: start;">
+ 
+
+ 
+ <div style="position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 20px; margin: 0 -20px; background: #F8F7F2; border-bottom: 1.5px solid #191A1B;">
+ <a href="index.html" style="text-decoration: none; color: #191A1B; display: flex; align-items: center; gap: 10px; min-width: 0;">
+ <img src="assets/img/adi-headshot.png" alt="Adidev Jhunjhunwala" style="width: 38px; height: 38px; object-fit: cover; display: block; flex: 0 0 38px; filter: saturate(0.85);">
+ <span style="font-family: 'Newsreader', serif; font-size: 21px; letter-spacing: -0.012em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Adidev Jhunjhunwala</span>
+ </a>
+ <div role="button" tabindex="0" style="flex: 0 0 auto; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; color: #8E1C30; padding: 8px 0 8px 10px;" id="idx-toggle">INDEX ▾</div>
+ </div>
+ 
+
+ 
+ <div style="padding: 16px 0 6px;">
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 4px;">RESEARCH</div>
+ <a href="self-awareness.html" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E; margin-right: 9px;">01</span>Robot Self Awareness</a>
+ <a href="n-dimensional-evolved-robots.html" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0; color: #191A1B;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; margin-right: 9px;">02</span><span style="box-shadow: inset 0 -8px 0 #B9D9EB;">N-Dimensional Evolved Soft Robots</span></a>
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; padding: 10px 0 15px;">more coming soon</div>
+
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 4px;">PAST PROJECTS</div>
+ <a href="engineering.html" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;">Engineering</a>
+ <a href="modeling.html" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;">Modeling</a>
+ <div style="height: 10px;"></div>
+
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 4px;">ELSEWHERE</div>
+ <div style="display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 11px 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+ <a href="https://scholar.google.com/citations?user=qRAMPkYAAAAJ&amp;hl=en" style="text-decoration: none; color: #1B4A73;">Scholar ↗</a>
+ <a href="https://github.com/adidevj7" style="text-decoration: none; color: #1B4A73;">GitHub ↗</a>
+ <a href="https://www.linkedin.com/in/adidevj" style="text-decoration: none; color: #1B4A73;">LinkedIn ↗</a>
+ </div>
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #1B4A73; padding-bottom: 8px;">aj3337(at)columbia(dot)edu</div>
+ </div>
+ 
+ </div>
+
+<div class="pg" style="min-height: 100vh; display: grid; grid-template-columns: 220px minmax(0, 980px); gap: 56px; justify-content: center; padding: 56px 60px 60px;">
+
+ <div class="rail" style="position: sticky; top: 56px; align-self: start;">
  <img src="assets/img/adi-headshot.png" alt="Adidev Jhunjhunwala" style="width: 132px; height: 132px; object-fit: cover; display: block; margin-bottom: 26px; filter: saturate(0.85);">
 
  <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 30px; font-family: 'Archivo', sans-serif; font-size: 14px;">
@@ -40,16 +92,15 @@
 
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">RESEARCH</div>
  <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 16px; font-family: 'Archivo', sans-serif; font-size: 14px;">
- <a href="self-awareness.html" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-44"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">01</span><span>Robot Self Awareness</span></a>
+ <a href="self-awareness.html" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;" class="hv0"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">01</span><span>Robot Self Awareness</span></a>
  <a href="n-dimensional-evolved-robots.html" style="text-decoration: none; color: #191A1B; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30;">02</span><span><span style="box-shadow: inset 0 -8px 0 #B9D9EB;">N-Dimensional Evolved Soft Robots</span></span></a>
- <div style="display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;"><span>03</span><span style="color: #8E1C30;">coming soon</span></div>
- <div style="display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 5px; font-weight: 700; line-height: 1.5; color: #4A4A44; margin-top: 4px;"><span style="text-align: center;">·<br>·<br>·</span><span style="text-align: center;">·<br>·<br>·</span></div>
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; padding-top: 2px;">more coming soon</div>
  </div>
 
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">PAST PROJECTS</div>
  <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 32px; font-family: 'Archivo', sans-serif; font-size: 14px;">
- <a href="engineering.html" style="text-decoration: none; color: #4A4A44;"class="hv-45">Engineering</a>
- <a href="modeling.html" style="text-decoration: none; color: #4A4A44;"class="hv-46">Modeling</a>
+ <a href="engineering.html" style="text-decoration: none; color: #4A4A44;" class="hv0">Engineering</a>
+ <a href="modeling.html" style="text-decoration: none; color: #4A4A44;" class="hv0">Modeling</a>
  </div>
 
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">ELSEWHERE</div>
@@ -63,7 +114,7 @@
 
  <div>
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8E1C30; margin-bottom: 18px;">RESEARCH / 02</div>
- <h1 style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(40px, 4.4vw, 62px); line-height: 1.0; letter-spacing: -0.025em; margin: 0 0 24px; max-width: 24ch;">N-Dimensional Evolved Soft Robots</h1>
+ <h1 class="h1" style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(40px, 4.4vw, 62px); line-height: 1.0; letter-spacing: -0.025em; margin: 0 0 24px; max-width: 24ch;">N-Dimensional Evolved Soft Robots</h1>
 
  <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start; margin-bottom: 44px;">
  <p style="flex: 1 1 min(100%, 34ch); font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: 24px; line-height: 1.42; color: #8E1C30; margin: 0; max-width: 48ch; text-wrap: pretty;">Evolving robot bodies in more than three spatial dimensions, then asking what locomotion even means once the body has more room to move than the world does.</p>
@@ -90,4 +141,37 @@
  </div>
 </div>
 
-</body></html>
+<script>
+(function(){
+ var t=document.querySelectorAll('.sk-tab'),p=document.querySelectorAll('.sk-pan');
+ function show(i){t.forEach(function(x){x.classList.toggle('on',x.dataset.i===String(i));});
+  p.forEach(function(x){x.hidden=x.dataset.i!==String(i);});}
+ t.forEach(function(x){['mouseenter','focus','click'].forEach(function(e){
+  x.addEventListener(e,function(){show(x.dataset.i);});});});
+ document.querySelectorAll('.ms-h').forEach(function(h){
+  h.addEventListener('click',function(){
+   var b=document.querySelector('.ms-b[data-i="'+h.dataset.i+'"]');
+   var o=b.hidden; b.hidden=!o;
+   h.querySelector('.ms-s').textContent=o?'\u2212':'+';
+   h.style.color=o?'#191A1B':'#4A4A44';});});
+ var bar=document.getElementById('idx-toggle'), pan=document.getElementById('idx-panel');
+ if(bar&&pan){pan.hidden=true;
+  bar.addEventListener('click',function(){pan.hidden=!pan.hidden;
+   bar.textContent=pan.hidden?'INDEX \u25be':'CLOSE';});}
+ var el=document.querySelector('.register-strip');
+ if(el){var d=false,sx=0,sl=0,mv=false,tr=el.firstElementChild;
+  el.addEventListener('pointerdown',function(e){if(e.pointerType==='touch')return;
+   d=true;mv=false;sx=e.clientX;sl=el.scrollLeft;el.style.cursor='grabbing';
+   if(tr)tr.classList.add('dragging');});
+  el.addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-sx;
+   if(Math.abs(dx)>3)mv=true;el.scrollLeft=sl-dx;e.preventDefault();});
+  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
+   el.addEventListener(ev,function(){if(!d)return;d=false;el.style.cursor='grab';
+    if(tr)tr.classList.remove('dragging');});});
+  el.addEventListener('click',function(e){if(mv){e.preventDefault();e.stopPropagation();}},true);}
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9527b08365d44bf691dd988606c7716a"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html><div id="idx-panel" hidden>
+</div>

@@ -1,43 +1,35 @@
 # ajhun.com
 
-Static HTML site. No build step, no dependencies. Edit a file, commit, Netlify redeploys.
-
-## Structure
+Static HTML. No build step, no dependencies. Edit a file, commit, Netlify redeploys.
 
     index.html                          landing
     engineering.html                    mechanical projects
     modeling.html                       computational projects
-    self-awareness.html                 research project 01
-    n-dimensional-evolved-robots.html   research project 02
+    self-awareness.html                 research 01
+    n-dimensional-evolved-robots.html   research 02
     404.html
-    assets/css/site.css                 fonts, globals, hover rules, components
-    assets/fonts/                       self-hosted woff2
+    assets/css/site.css                 shared globals
     assets/img/                         all images
+    assets/docs/                        PDFs
+
+Each page carries its own <style> block with that page's rules, including the
+mobile layout under @media (max-width: 768px). Fonts load from Google Fonts.
+Cloudflare Web Analytics beacon sits before </body> on every page.
 
 ## Local preview
+Open index.html in a browser. What you see is what deploys.
 
-Open `index.html` in a browser. What you see is exactly what deploys.
+## Mobile
+One set of files. The @media (max-width: 768px) block in each page's <style>
+takes over below 768px. Nothing to switch on.
 
-## Adding a research project
-
-1. Copy `self-awareness.html` to a new file.
-2. Update the `<title>` and the meta description at the top.
-3. Add it to the sidebar nav block in every page (search for `RESEARCH`).
-
-## Adding an engineering or modeling project
-
-Copy an existing `<section>` block in `engineering.html` or `modeling.html`,
-change the id, title and text, and add its anchor to the "ON THIS PAGE" list.
+## Adding a project
+Copy an existing <section> in engineering.html or modeling.html, change the id,
+title and text, add its anchor to the "ON THIS PAGE" list, and add the same
+entry to the mobile index panel near the top of the file.
 
 ## Images
-
-Drop the file in `assets/img/` and reference it as `assets/img/name.jpg`.
-Lowercase, hyphenated, no spaces.
-
-## Before going live
-
-Remove `<meta name="robots" content="noindex">` from all five pages.
+Drop into assets/img/, lowercase-hyphenated, reference as assets/img/name.jpg.
 
 ## Deploy
-
-    netlify deploy --dir=. --prod
+Push to the v2 branch. Netlify builds from it automatically.

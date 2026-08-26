@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html><head>
+<!DOC</div>TYPE html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Robot Self Awareness — Adidev Jhunjhunwala</title>
@@ -8,8 +9,9 @@
 <meta property="og:description" content="What stays the same when a robot learns something new? Evidence of a persistent self-like subnetwork under continual learning.">
 <meta property="og:image" content="https://ajhun.com/assets/img/adi-headshot.png">
 <meta property="og:type" content="website">
-<meta name="robots" content="noindex">
-<link rel="icon" href="assets/img/favicon.png">
+<link rel="icon" href="assets/img/adi-headshot.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
 <style>
  html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
@@ -24,14 +26,76 @@
   }
   a { color: #1B4A73; }
   a:hover { color: #191A1B; }
+
+  /* --- mobile --- */
+  .m-nav { display: none; }
+  @media (max-width: 768px) {
+    .pg { display: block !important; padding: 26px 20px 40px !important; }
+    .rail { display: none !important; }
+    .m-nav { display: block; padding: 0 20px; }
+    .h1 { font-size: 38px !important; line-height: 0.99 !important; max-width: none !important; }
+    .pg p.qlede { font-size: 22px !important; white-space: normal !important; line-height: 1.28 !important; text-indent: 0 !important; margin-bottom: 22px !important; }
+    .sec { gap: 10px !important; margin-bottom: 34px !important; }
+    .sec-num { flex: 0 0 100% !important; border-top: 1.5px solid #191A1B !important; padding-top: 10px !important; }
+    .sec > div:last-child { border-top: 0 !important; padding-top: 0 !important; }
+    .sec-h { font-size: 27px !important; margin-bottom: 14px !important; }
+    .sec p, .pg p { font-size: 16px !important; line-height: 1.68 !important; }
+    .fig { width: calc(100% + 40px) !important; max-width: none !important; margin-left: -20px !important; margin-right: -20px !important; margin-bottom: 34px !important; }
+    .fig-cap { font-size: 10px !important; letter-spacing: 0.1em !important; }
+  }
   ::selection { background: #B9D9EB; }
 </style>
 </head>
 <body>
 
-<div style="min-height: 100vh; display: grid; grid-template-columns: 220px minmax(0, 980px); gap: 56px; justify-content: center; padding: 56px 60px 60px;">
+ <div class="m-nav">
 
- <div style="position: sticky; top: 56px; align-self: start;">
+ 
+
+ 
+ <div style="position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 20px; margin: 0 -20px; background: #F8F7F2; border-bottom: 1.5px solid #191A1B;">
+ <a href="index.html" style="text-decoration: none; color: #191A1B; display: flex; align-items: center; gap: 10px; min-width: 0;">
+ <img src="assets/img/adi-headshot.png" alt="Adidev Jhunjhunwala" style="width: 38px; height: 38px; object-fit: cover; display: block; flex: 0 0 38px; filter: saturate(0.85);">
+ <span style="font-family: 'Newsreader', serif; font-size: 21px; letter-spacing: -0.012em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Adidev Jhunjhunwala</span>
+ </a>
+ <div role="button" tabindex="0" style="flex: 0 0 auto; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; color: #8E1C30; padding: 8px 0 8px 10px;" id="idx-toggle">INDEX ▾</div>
+ </div>
+ 
+
+ 
+ <div style="padding: 16px 0 6px;">
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 4px;">CONTENTS</div>
+ <a href="#s1" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E; margin-right: 9px;">1</span>Why this matters</a>
+ <a href="#s2" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E; margin-right: 9px;">2</span>Main results</a>
+ <a href="#s3" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E; margin-right: 9px;">3</span>How we approached it</a>
+ <a href="#s4" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E; margin-right: 9px;">4</span>Why it's interesting</a>
+ <a href="#s5" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E; margin-right: 9px;">5</span>Under the hood</a>
+ <div style="height: 10px;"></div>
+
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 4px;">RESEARCH</div>
+ <a href="self-awareness.html" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0; color: #191A1B;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; margin-right: 9px;">01</span><span style="box-shadow: inset 0 -8px 0 #B9D9EB;">Robot Self Awareness</span></a>
+ <a href="n-dimensional-evolved-robots.html" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E; margin-right: 9px;">02</span>N-Dimensional Evolved Soft Robots</a>
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; padding: 10px 0 15px;">more coming soon</div>
+
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 4px;">PAST PROJECTS</div>
+ <a href="engineering.html" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;">Engineering</a>
+ <a href="modeling.html" style="font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; color: #4A4A44; display: block; padding: 11px 0;">Modeling</a>
+ <div style="height: 10px;"></div>
+
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 4px;">ELSEWHERE</div>
+ <div style="display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 11px 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+ <a href="https://arxiv.org/abs/2603.24350" style="text-decoration: none; color: #1B4A73;">arXiv ↗</a>
+ <a href="https://github.com/adidevj7/EmergentRobotSelf" style="text-decoration: none; color: #1B4A73;">GitHub ↗</a>
+ <a href="https://scholar.google.com/citations?user=qRAMPkYAAAAJ&amp;hl=en" style="text-decoration: none; color: #1B4A73;">Scholar ↗</a>
+ </div>
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #1B4A73; padding-bottom: 8px;">aj3337(at)columbia(dot)edu</div>
+ </div>
+ 
+ </div>
+
+<div class="pg" style="min-height: 100vh; display: grid; grid-template-columns: 220px minmax(0, 980px); gap: 56px; justify-content: center; padding: 56px 60px 60px;">
+
+ <div class="rail" style="position: sticky; top: 56px; align-self: start;">
  <img src="assets/img/adi-headshot.png" alt="Adidev Jhunjhunwala" style="width: 132px; height: 132px; object-fit: cover; display: block; margin-bottom: 26px; filter: saturate(0.85);">
 
  <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 30px; font-family: 'Archivo', sans-serif; font-size: 14px;">
@@ -41,24 +105,23 @@
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">RESEARCH</div>
  <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 16px; font-family: 'Archivo', sans-serif; font-size: 14px;">
  <a href="self-awareness.html" style="text-decoration: none; color: #191A1B; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30;">01</span><span><span style="box-shadow: inset 0 -8px 0 #B9D9EB;">Robot Self Awareness</span></span></a>
- <a href="n-dimensional-evolved-robots.html" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;"class="hv-34"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">02</span><span>N-Dimensional Evolved Soft Robots</span></a>
- <div style="display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;"><span>03</span><span style="color: #8E1C30;">coming soon</span></div>
- <div style="display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 5px; font-weight: 700; line-height: 1.5; color: #4A4A44; margin-top: 4px;"><span style="text-align: center;">·<br>·<br>·</span><span style="text-align: center;">·<br>·<br>·</span></div>
+ <a href="n-dimensional-evolved-robots.html" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 26px 1fr; gap: 8px;" class="hv0"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">02</span><span>N-Dimensional Evolved Soft Robots</span></a>
+ <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8E1C30; padding-top: 2px;">more coming soon</div>
  </div>
 
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">CONTENTS</div>
  <div style="display: flex; flex-direction: column; gap: 9px; margin-bottom: 32px; font-family: 'Archivo', sans-serif; font-size: 13px;">
- <a href="#s1" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;"class="hv-35"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">1</span><span>Why this matters</span></a>
- <a href="#s2" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;"class="hv-36"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">2</span><span>Main results</span></a>
- <a href="#s3" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;"class="hv-37"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">3</span><span>How we approached it</span></a>
- <a href="#s4" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;"class="hv-38"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">4</span><span>Why it's interesting</span></a>
- <a href="#s5" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;"class="hv-39"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">5</span><span>Under the hood</span></a>
+ <a href="#s1" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;" class="hv0"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">1</span><span>Why this matters</span></a>
+ <a href="#s2" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;" class="hv0"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">2</span><span>Main results</span></a>
+ <a href="#s3" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;" class="hv0"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">3</span><span>How we approached it</span></a>
+ <a href="#s4" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;" class="hv0"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">4</span><span>Why it's interesting</span></a>
+ <a href="#s5" style="text-decoration: none; color: #4A4A44; display: grid; grid-template-columns: 18px 1fr; gap: 8px;" class="hv0"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #86867E;">5</span><span>Under the hood</span></a>
  </div>
 
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #86867E; border-bottom: 1px solid #D8D7CE; padding-bottom: 7px; margin-bottom: 13px;">PAST PROJECTS</div>
  <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 32px; font-family: 'Archivo', sans-serif; font-size: 14px;">
- <a href="engineering.html" style="text-decoration: none; color: #4A4A44;"class="hv-40">Engineering</a>
- <a href="modeling.html" style="text-decoration: none; color: #4A4A44;"class="hv-41">Modeling</a>
+ <a href="engineering.html" style="text-decoration: none; color: #4A4A44;" class="hv0">Engineering</a>
+ <a href="modeling.html" style="text-decoration: none; color: #4A4A44;" class="hv0">Modeling</a>
  </div>
 
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; line-height: 2;">
@@ -71,37 +134,37 @@
 
  <div>
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8E1C30; margin-bottom: 18px;">RESEARCH / 01 · CREATIVE MACHINES LAB</div>
- <h1 style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(40px, 4.4vw, 62px); line-height: 1.0; letter-spacing: -0.026em; margin: 0 0 24px; max-width: 20ch;">Robot Self Awareness</h1>
+ <h1 class="h1" style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(40px, 4.4vw, 62px); line-height: 1.0; letter-spacing: -0.026em; margin: 0 0 24px; max-width: 20ch;">Robot Self Awareness</h1>
 
  <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start; margin-bottom: 40px;">
  <div style="flex: 1 1 100%; container-type: inline-size;">
- <p style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: min(3.3cqw, 34px); line-height: 1.25; color: #8E1C30; margin: 0 0 28px; text-indent: -0.4em; white-space: nowrap;">“What, exactly, stays the same when a robot learns to do something new?”</p>
+ <p class="qlede" style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: min(3.3cqw, 34px); line-height: 1.25; color: #8E1C30; margin: 0 0 28px; text-indent: -0.4em; white-space: nowrap;">“What, exactly, stays the same when a robot learns to do something new?”</p>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 18px; max-width: 78ch; text-wrap: pretty;">Humans do not relearn their bodies from scratch every time the goal changes. We may learn a new skill, adapt to a new environment, or recover from a mistake, but some internal sense of the body carries forward. This project asks whether something similar can emerge inside a learned robot controller.</p>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; max-width: 78ch; text-wrap: pretty;">In this work, we trained a single robot across multiple behaviors and then looked inside the neural policy to test whether a stable, reusable internal subnetwork emerged — something closer to a persistent sense of the robot's own body than a one-off task controller.</p>
  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px;">
- <a href="https://arxiv.org/abs/2603.24350" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.04em; text-decoration: none; color: #1B4A73; border: 1px solid #C9C4B4; padding: 10px 18px; display: inline-flex; align-items: center; gap: 8px;"class="hv-42">arXiv preprint <span style="color: #86867E;">↗</span></a>
- <a href="https://github.com/adidevj7/EmergentRobotSelf" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.04em; text-decoration: none; color: #1B4A73; border: 1px solid #C9C4B4; padding: 10px 18px; display: inline-flex; align-items: center; gap: 8px;"class="hv-43">GitHub repo <span style="color: #86867E;">↗</span></a>
+ <a href="https://arxiv.org/abs/2603.24350" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.04em; text-decoration: none; color: #1B4A73; border: 1px solid #C9C4B4; padding: 10px 18px; display: inline-flex; align-items: center; gap: 8px;" class="hv3">arXiv preprint <span style="color: #86867E;">↗</span></a>
+ <a href="https://github.com/adidevj7/EmergentRobotSelf" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.04em; text-decoration: none; color: #1B4A73; border: 1px solid #C9C4B4; padding: 10px 18px; display: inline-flex; align-items: center; gap: 8px;" class="hv3">GitHub repo <span style="color: #86867E;">↗</span></a>
  </div>
  </div>
   </div>
 
- <div style="border-top: 1px solid #191A1B; padding-top: 14px; margin-bottom: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #86867E;">FIG. 1 — THE PERSISTENT SELF ACROSS LEARNED BEHAVIORS</div>
- <img src="assets/img/sketching-v17-copy.png" alt="Visualization of the persistent self across learned robot behaviors" style="width: 100%; display: block; margin-bottom: 48px; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.03);">
+ <div class="fig-cap" style="border-top: 1px solid #191A1B; padding-top: 14px; margin-bottom: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #86867E;">FIG. 1 — THE PERSISTENT SELF ACROSS LEARNED BEHAVIORS</div>
+ <img src="assets/img/sketching-v17-copy.png" class="fig" alt="Visualization of the persistent self across learned robot behaviors" style="width: 100%; display: block; margin-bottom: 48px; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.03);">
 
- <div id="s1" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 42px;">
- <div style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 1</div>
+ <div id="s1" class="sec" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 42px;">
+ <div class="sec-num" style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 1</div>
  <div style="flex: 1 1 min(100%, 24ch); max-width: none; border-top: 1px solid #D8D7CE; padding-top: 12px;">
- <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 18px;">Why this matters — the problem</h2>
+ <h2 class="sec-h" style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 18px;">Why this matters — the problem</h2>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; max-width: 78ch; text-wrap: pretty;">Most robot learning systems are judged by what they can do: walk, turn, jump, manipulate, recover. But there is a deeper question underneath that performance: when a robot learns several behaviors over time, does it only store task-specific control tricks, or does it also build a more persistent internal understanding of its own body?</p>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; max-width: 78ch; text-wrap: pretty;">That distinction matters for both science and engineering. Scientifically, it gives a concrete way to study whether something self-like can emerge inside a learning system without explicitly programming it in. From an engineering perspective, it points toward controllers that reuse stable body knowledge while only rewriting the parts that need to change for a new objective.</p>
  <p style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 17px; line-height: 1.72; color: #1B4A73; margin: 0; max-width: 78ch; text-wrap: pretty;">In other words: to learn continuously, a robot should not have to rewrite what it is every time it changes what it is doing.</p>
  </div>
  </div>
 
- <div id="s2" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 24px;">
- <div style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 2</div>
+ <div id="s2" class="sec" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 24px;">
+ <div class="sec-num" style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 2</div>
  <div style="flex: 1 1 min(100%, 24ch); max-width: none; border-top: 1px solid #D8D7CE; padding-top: 12px;">
- <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 18px;">Main results</h2>
+ <h2 class="sec-h" style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 18px;">Main results</h2>
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8E1C30; margin: -8px 0 16px;">16.9 PT MEAN SELF-VERSUS-TASK SEPARATION</div>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; max-width: 78ch; text-wrap: pretty;">We trained a simulated quadruped in a continual-learning curriculum across three distinct behaviors: walk, wiggle, and bob. We then compared its internal neural structure against a control policy trained on a constant task.</p>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; max-width: 78ch; text-wrap: pretty;">The core result was that continual learning produced a stable self-like subnetwork: a subset of the controller that remained noticeably more persistent across behavior changes, while other regions reorganized more strongly to implement the current behavior.</p>
@@ -109,13 +172,13 @@
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; max-width: 78ch; text-wrap: pretty;">Just as importantly, this was not only a visualization artifact from one lucky run. The same pattern persisted across cycles, across seeds, and across architectural variations, with the strongest self-like structure showing up early in the network and then stabilizing over training.</p>
  </div>
  </div>
- <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #86867E; border-top: 1px solid #D8D7CE; padding-top: 12px; margin-bottom: 12px;">FIG. 2 — PERSISTENT SELF-LIKE SUBNETWORK UNDER CONTINUAL LEARNING</div>
- <img src="assets/img/maps-wvswsj-v6-copy.png" alt="Quantitative comparison showing persistent self-like subnetwork under continual learning" style="width: 100%; display: block; margin-bottom: 48px; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.03);">
+ <div class="fig-cap" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #86867E; border-top: 1px solid #D8D7CE; padding-top: 12px; margin-bottom: 12px;">FIG. 2 — PERSISTENT SELF-LIKE SUBNETWORK UNDER CONTINUAL LEARNING</div>
+ <img src="assets/img/maps-wvswsj-v6-copy.png" class="fig" alt="Quantitative comparison showing persistent self-like subnetwork under continual learning" style="width: 100%; display: block; margin-bottom: 48px; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.03);">
 
- <div id="s3" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 24px;">
- <div style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 3</div>
+ <div id="s3" class="sec" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 24px;">
+ <div class="sec-num" style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 3</div>
  <div style="flex: 1 1 min(100%, 24ch); max-width: none; border-top: 1px solid #D8D7CE; padding-top: 12px;">
- <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 22px;">How we approached it</h2>
+ <h2 class="sec-h" style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 22px;">How we approached it</h2>
  <div style="display: flex; flex-direction: column; gap: 20px;">
  <div>
  <h3 style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 17px; margin: 0 0 6px;">Train one policy across multiple behaviors.</h3>
@@ -132,25 +195,25 @@
  </div>
  </div>
  </div>
- <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #86867E; border-top: 1px solid #D8D7CE; padding-top: 12px; margin-bottom: 12px;">FIG. 3 — TRAINING AND ANALYSIS PIPELINE</div>
- <img src="assets/img/fullproc-v21-copy.png" alt="Overview of the robot training and analysis pipeline" style="width: 100%; display: block; margin-bottom: 48px; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.03);">
+ <div class="fig-cap" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #86867E; border-top: 1px solid #D8D7CE; padding-top: 12px; margin-bottom: 12px;">FIG. 3 — TRAINING AND ANALYSIS PIPELINE</div>
+ <img src="assets/img/fullproc-v21-copy.png" class="fig" alt="Overview of the robot training and analysis pipeline" style="width: 100%; display: block; margin-bottom: 48px; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.03);">
 
- <div id="s4" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 24px;">
- <div style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 4</div>
+ <div id="s4" class="sec" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 24px;">
+ <div class="sec-num" style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 4</div>
  <div style="flex: 1 1 min(100%, 24ch); max-width: none; border-top: 1px solid #D8D7CE; padding-top: 12px;">
- <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 18px;">Why we think the result is interesting</h2>
+ <h2 class="sec-h" style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 18px;">Why we think the result is interesting</h2>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; max-width: 78ch; text-wrap: pretty;">The point is not that the robot is “self-aware” in the human sense. The interesting result is narrower and, to us, more useful: under continual learning, a standard deep RL policy can spontaneously organize into a stable internal core alongside more behavior-specific components.</p>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; max-width: 78ch; text-wrap: pretty;">That suggests there may be a practical way to identify reusable body-related structure inside black-box controllers — without hand-designing a separate self-model. If that holds more broadly, it could matter for continual adaptation, transfer, debugging, and monitoring whether fine-tuning is preserving the right internal structure versus overwriting it.</p>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0; max-width: 78ch; text-wrap: pretty;">More broadly, we like this project because it sits at an intersection we care a lot about: reinforcement learning, robotics, and interpretability. It is not just about making the robot move. It is about understanding what the controller has actually learned.</p>
  </div>
  </div>
- <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #86867E; border-top: 1px solid #D8D7CE; padding-top: 12px; margin-bottom: 12px;">FIG. 4 — ROBUSTNESS AND PERSISTENCE ACROSS CYCLES</div>
- <img src="assets/img/robust-v9-copy.png" alt="Robustness and persistence of self-like subnetworks across cycles" style="width: 100%; display: block; margin-bottom: 48px; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.03);">
+ <div class="fig-cap" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #86867E; border-top: 1px solid #D8D7CE; padding-top: 12px; margin-bottom: 12px;">FIG. 4 — ROBUSTNESS AND PERSISTENCE ACROSS CYCLES</div>
+ <img src="assets/img/robust-v9-copy.png" class="fig" alt="Robustness and persistence of self-like subnetworks across cycles" style="width: 100%; display: block; margin-bottom: 48px; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.03);">
 
- <div id="s5" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 42px;">
- <div style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 5</div>
+ <div id="s5" class="sec" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 42px;">
+ <div class="sec-num" style="flex: 0 0 52px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: #86867E; border-top: 1.5px solid #191A1B; padding-top: 12px;">§ 5</div>
  <div style="flex: 1 1 min(100%, 24ch); max-width: none; border-top: 1px solid #D8D7CE; padding-top: 12px;">
- <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 18px;">Under the hood</h2>
+ <h2 class="sec-h" style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 18px;">Under the hood</h2>
  <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #1B4A73; margin: -8px 0 16px;">PYTHON · PYTORCH · ISAAC · BASH/TMUX · GIT</div>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; max-width: 78ch; text-wrap: pretty;">We built a broad stack around this project: RL training design, reproducible experiment infrastructure, checkpointing and resume tools, rollout/video tooling, and a full analysis pipeline for comparing internal network structure across runs, phases, and behaviors.</p>
  <p style="font-family: 'Archivo', sans-serif; font-size: 17px; line-height: 1.72; color: #33332E; margin: 0 0 16px; max-width: 78ch; text-wrap: pretty;">A big accelerator was Isaac-based vectorized simulation, which made it possible to iterate quickly and run large batches of experiments with much stronger reproducibility than a slower single-env loop.</p>
@@ -166,4 +229,37 @@
  </div>
 </div>
 
-</body></html>
+<script>
+(function(){
+ var t=document.querySelectorAll('.sk-tab'),p=document.querySelectorAll('.sk-pan');
+ function show(i){t.forEach(function(x){x.classList.toggle('on',x.dataset.i===String(i));});
+  p.forEach(function(x){x.hidden=x.dataset.i!==String(i);});}
+ t.forEach(function(x){['mouseenter','focus','click'].forEach(function(e){
+  x.addEventListener(e,function(){show(x.dataset.i);});});});
+ document.querySelectorAll('.ms-h').forEach(function(h){
+  h.addEventListener('click',function(){
+   var b=document.querySelector('.ms-b[data-i="'+h.dataset.i+'"]');
+   var o=b.hidden; b.hidden=!o;
+   h.querySelector('.ms-s').textContent=o?'\u2212':'+';
+   h.style.color=o?'#191A1B':'#4A4A44';});});
+ var bar=document.getElementById('idx-toggle'), pan=document.getElementById('idx-panel');
+ if(bar&&pan){pan.hidden=true;
+  bar.addEventListener('click',function(){pan.hidden=!pan.hidden;
+   bar.textContent=pan.hidden?'INDEX \u25be':'CLOSE';});}
+ var el=document.querySelector('.register-strip');
+ if(el){var d=false,sx=0,sl=0,mv=false,tr=el.firstElementChild;
+  el.addEventListener('pointerdown',function(e){if(e.pointerType==='touch')return;
+   d=true;mv=false;sx=e.clientX;sl=el.scrollLeft;el.style.cursor='grabbing';
+   if(tr)tr.classList.add('dragging');});
+  el.addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-sx;
+   if(Math.abs(dx)>3)mv=true;el.scrollLeft=sl-dx;e.preventDefault();});
+  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
+   el.addEventListener(ev,function(){if(!d)return;d=false;el.style.cursor='grab';
+    if(tr)tr.classList.remove('dragging');});});
+  el.addEventListener('click',function(e){if(mv){e.preventDefault();e.stopPropagation();}},true);}
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9527b08365d44bf691dd988606c7716a"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html><div id="idx-panel" hidden>
+</div>
